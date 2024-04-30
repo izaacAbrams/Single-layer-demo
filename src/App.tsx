@@ -10,7 +10,7 @@ const PADDING = 500;
 const MIN_X_PADDING = 45;
 const MIN_Y_PADDING = 45;
 const DESIGN_SIZE = { width: 1080, height: 1080 };
-const PAGES_COUNT = 10;
+const PAGES_COUNT = 20;
 
 
 function App() {

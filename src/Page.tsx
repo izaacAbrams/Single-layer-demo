@@ -1,5 +1,6 @@
 import Konva from "konva";
-import { Group, Rect } from "react-konva";
+import { Group, Image, Rect } from "react-konva";
+import useImage from "use-image";
 
 type dims = { width: number; height: number };
 type IPageProps = {
@@ -9,6 +10,7 @@ type IPageProps = {
   designDims: dims;
   pageIndex: number;
 };
+
 export const Page = ({
   scale,
   pageDims,
@@ -16,6 +18,11 @@ export const Page = ({
   designDims,
   pageIndex,
 }: IPageProps) => {
+  const [image] = useImage(
+    "https://img.vecteezy.com/unsafe/3000x/https://static.vecteezy.com/system/resources/previews/022/454/723/large_2x/circuit-board-futuristic-technology-background-blue-3d-rendering-toned-image-generative-ai-free-photo.jpg?rand=1682610488589",
+    'anonymous',
+  );
+
   return (
     <Group
       name="page-container"
@@ -32,6 +39,13 @@ export const Page = ({
         y={0}
         width={designDims.width}
         height={designDims.height}
+      />
+      <Image 
+        image={image}
+        height={630.3327130955334}
+        width={957.4678899082738}
+        x={50}
+        y={200}
       />
     </Group>
   );
